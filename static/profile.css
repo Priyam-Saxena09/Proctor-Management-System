@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap');
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: chartreuse;
+    height:100px;
+    border-radius: 5px;
+}
+.nav b
+{
+    font-size: 170%;
+    font-family: 'Sirin Stencil';
+    padding-left: 1%;
+}
+.nav i
+{
+    font-size: 150%;
+    font-family: 'Sirin Stencil';
+    padding-left: 58%;
+}
+.nav em
+{
+    font-size: 150%;
+    font-family: 'Sirin Stencil';
+    padding-left: 2%;
+}
+.prof
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+.box
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+h1
+{
+    font-family: 'Aref Ruqaa';
+    font-size:290%;
+    padding-left: 2%;
+}
+.box b
+{
+    font-size: 170%;
+    font-family: 'Sirin Stencil';
+    padding-left: 13%;
+}
+.box b:hover
+{
+    font-size: 190%;
+    cursor: pointer;
+}
+form
+{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4%;
+}
+input
+{
+    width:295px;
+    margin-bottom: 8%;
+    height:30px;
+}
+form i
+{
+    font-size: 115%;
+    font-family: 'Sirin Stencil';
+    position: absolute;
+    left: 32%;
+}
+button
+{
+    width:100px;
+    background-color: cyan;
+    height:40px;
+}
+.hide
+{
+    display: none;
+}

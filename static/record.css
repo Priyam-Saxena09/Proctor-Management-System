@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap');
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: chartreuse;
+    height:100px;
+    border-radius: 5px;
+}
+.nav b
+{
+    font-size: 170%;
+    font-family: 'Sirin Stencil';
+    padding-left: 1%;
+}
+.nav i
+{
+    font-size: 150%;
+    font-family: 'Sirin Stencil';
+    padding-left: 58%;
+}
+.nav em
+{
+    font-size: 150%;
+    font-family: 'Sirin Stencil';
+    padding-left: 2%;
+}
+.acad
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+h1
+{
+    font-family: 'Aref Ruqaa';
+    font-size:290%;
+    padding-left: 2%;
+}
+table
+{
+    width:90%;
+    text-align: center;
+}
+em
+{
+    font-size: 170%;
+    font-family: 'Sirin Stencil';
+}
+button
+{
+    width:100px;
+    background-color: cyan;
+    height:40px;
+}
+p
+{
+    font-size: 170%;
+    font-family: 'Sirin Stencil';
+    padding-top:4%;
+}
+#back
+{
+    font-size: 150%;
+    font-family: 'Sirin Stencil';
+    padding-left: 1%;
+}
+.hide
+{
+    display: none;
+}

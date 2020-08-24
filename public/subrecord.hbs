@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{stat}} Academic Record</title>
+    <link rel="stylesheet" href="record.css">
+    <link rel="icon" href="Images/Log.jpg">
+</head>
+<body>
+    <div class="nav">
+        <b>Proctor Management System</b>
+        <i><a href="/getd?name={{name}}&usn={{usn}}"><- Go to Dashboard</a></i>
+        <i id="back"><a href="/rec">Go Back</a></i>
+        <em><a href="/logout">Log Out</a></em>
+    </div>
+    <div class="acad">
+<h1 id="nam">Academic Record-{{name1}}</h1>
+<h1 id="yer">Year:{{year}}</h1>
+<table border="2px">
+    <tr>
+        <th><em>S.No</em></th>
+        <th><em>Semester</em></th>
+        <th><em>Course Title</em></th>
+        <th><em>Course Code</em></th>
+        <th><em>Credits</em></th>
+        <th><em>Attendance</em></th>
+        <th><em>CIE</em></th>
+        <th><em>SEE</em></th>
+    </tr>
+</table>
+<p>Want to add new record?<a href="/recform?year={{year}}"><button>Add</button></a></p>
+    </div>
+    <script src="record1.js"></script>
+</body>
+</html>

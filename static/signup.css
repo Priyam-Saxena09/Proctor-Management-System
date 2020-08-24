@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+body
+{
+    background:url("Images/bmsce-1170x560.jpg");
+    background-size:112%;
+}
+.cont
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+select
+{
+    width:20%;
+}
+form
+{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-top: 4%;
+background: rgba(255, 255, 255, 0.5);
+width:60%;
+position: absolute;
+left:22%;
+margin-top: 4%;
+}
+input
+{
+width:355px;
+margin-bottom: 4%;
+height:30px;
+}
+form i
+{
+font-size: 115%;
+font-family: 'Sirin Stencil';
+position: absolute;
+left: 16%;
+}
+button
+{
+width:100px;
+background-color: cyan;
+height:40px;
+}
+h1
+{
+font-family: 'Aref Ruqaa';
+font-size:290%;
+}        

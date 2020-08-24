@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add your Record</title>
+    <link rel="stylesheet" href="recform.css">
+    <link rel="icon" href="Images/Log.jpg">
+</head>
+<body>
+    <div class="but">
+        <a href="/sub?year={{year}}"><h2>Go Back</h2></a>
+    </div>
+    <form action="/reco" method="post">
+    <h1>Add Your Academic Performance</h1>
+   <label for ="usn"><i>USN:</i></label>
+   <input type="text" id="usn" name="usn" value={{usn}}>
+   <label for ="sem"><i>Semester:</i></label>
+   <input type="number" id="sem" name="sem">
+   <label for ="year"><i>Academic Year:</i></label>
+   <input type="number" id="year" name="year" value={{year}}>
+   <label for ="title"><i>Course Title:</i></label>
+   <input type="text" id="title" name="title" placeholder="Enter the Course Title">
+   <label for ="code"><i>Course Code:</i></label>
+   <input type="text" id="code" name="code" placeholder="Enter the Course Code">
+   <label for ="credit"><i>Credits:</i></label>
+   <input type="number" id="credit" name="credit" placeholder="Enter The Credits">
+   <label for ="att"><i>Attendance:</i></label>
+   <input type="number" id="att" name="att" placeholder="Enter Your Attendance">
+   <label for ="cie"><i>CIE:</i></label>
+   <input type="number" id="cie" name="cie" placeholder="Enter Your CIE Number">
+   <label for ="see"><i>SEE:</i></label>
+   <input type="number" id="see" name="see" placeholder="Enter Your SEE Number">
+   <button>Submit</button>
+    </form>
+</body>
+</html>
