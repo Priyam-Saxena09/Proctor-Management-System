@@ -283,6 +283,7 @@ app.post("/personal",async(req,res) => {
     if(JSON.stringify(stud) != "[]")
     {
           const stud1 = await student.update({"name":login},{$set:{"name":req.body.name,"usn":req.body.usn,"dob":req.body.dob,"pname":req.body.pname,"email":req.body.email,"phone":req.body.phone}})
+          login=req.body.name;
           res.render("main",{
             "name":login,
             "usn":stud[0].usn,
@@ -298,6 +299,7 @@ app.post("/personalproc",async(req,res) => {
     if(JSON.stringify(stud) != "[]")
     {
           const stud1 = await proctor.update({"name":login1},{$set:{"name":req.body.name,"id":req.body.id,"dob":req.body.dob,"email":req.body.email,"phone":req.body.phone}})
+          login1=req.body.name;
           res.render("main",{
             "name":login1,
             "usn":stud[0].id,
@@ -313,8 +315,7 @@ app.post("/father",async(req,res) => {
     if(JSON.stringify(stud) != "[]")
     {
           const stud1 = await student.update({"name":login},{$set:{"fname":req.body.fname,"foccu":req.body.foccu,"fphone":req.body.fphone,"femail":req.body.femail}})
-          
-         res.render("main",{
+          res.render("main",{
             "name":login,
             "usn":stud[0].usn,
             "Prof":"Academic Record",
