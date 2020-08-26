@@ -144,7 +144,7 @@ app.post("/reco",async(req,res) => {
     }).catch(() => {
         res.render("404",{
             "error":"Please fill all the details",
-            "back":"/recform"
+            "back":`/recform?year=${req.body.year}`
         })
     })
 })
