@@ -1,12 +1,13 @@
 const express = require("express")
 require("./connection")
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 const app = express()
 var login = ""
 var login1 = ""
 const student = require("./schema")
 const proctor = require("./schema1")
 const record = require("./schema2")
+const sen = require("./email")
 app.use(express.static("static"))
 app.use(express.urlencoded())
 app.set("view engine","hbs")
@@ -23,6 +24,7 @@ app.get("/signup",(req,res) => {
 app.post("/student",async(req,res) => {
     const stud = await new student(req.body)
     stud.save().then(() => {
+        sen(req.body.name,req.body.email)
         res.render("login",{})
     }).catch(() => {
         res.render("404",{
@@ -35,6 +37,7 @@ app.post("/student",async(req,res) => {
 app.post("/proctor",async(req,res) => {
     const proc = await new proctor(req.body)
     proc.save().then(() => {
+        sen(req.body.name,req.body.email)
         res.render("login",{})
     }).catch(() => {
         res.render("404",{
