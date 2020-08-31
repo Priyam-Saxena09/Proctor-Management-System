@@ -49,7 +49,7 @@ document.querySelector("#personal").addEventListener("click",() => {
    <input type="number" id="phone" name="phone" placeholder="Enter Your Phone Number">
    <button>Save</button>
    </form>`
-   fetch("http://localhost:3000/prof").then((response) => {
+   fetch("/prof").then((response) => {
       response.json().then((data) => {
          document.querySelector("#name").value = data.name
          document.querySelector("#usn").value = data.usn
@@ -74,7 +74,7 @@ document.querySelector("#father").addEventListener("click",() => {
     <label for ="femail"><i>Email:</i></label>
     <input type="email" id="femail" name="femail" placeholder="Enter Your Father's Email">
     <button>Save</button>`
-    fetch("http://localhost:3000/prof").then((response) => {
+    fetch("/prof").then((response) => {
       response.json().then((data) => {
          document.querySelector("#fname").value = data.fname
          document.querySelector("#foccu").value = data.foccu
@@ -96,7 +96,7 @@ document.querySelector("#father").addEventListener("click",() => {
     <label for ="memail"><i>Email:</i></label>
     <input type="email" id="memail" name="memail" placeholder="Enter Your Mother's Email">
     <button>Save</button>`
-    fetch("http://localhost:3000/prof").then((response) => {
+    fetch("/prof").then((response) => {
       response.json().then((data) => {
          document.querySelector("#mname").value = data.mname
          document.querySelector("#moccu").value = data.moccu

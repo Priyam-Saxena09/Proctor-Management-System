@@ -1,6 +1,6 @@
 if(document.querySelector(".acad h1").textContent.split(" ")[0] == "Academic")
 {
-fetch("http://localhost:3000/fetchyear").then((response) => {
+fetch("/fetchyear").then((response) => {
     response.json().then((data) => {
         const table = document.querySelector("table")
         table.innerHTML = ""
@@ -24,7 +24,7 @@ fetch("http://localhost:3000/fetchyear").then((response) => {
 else if(document.querySelector(".acad h1").textContent.split(" ")[0] == "Proctee")
 {
     const name = document.querySelector("title").textContent.split("-")[1]
-    fetch("http://localhost:3000/fetchyearproc?name=" + name).then((response) => {
+    fetch("/fetchyearproc?name=" + name).then((response) => {
     response.json().then((data) => {
         const table = document.querySelector("table")
         table.innerHTML = ""

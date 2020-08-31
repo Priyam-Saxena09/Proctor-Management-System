@@ -1,7 +1,7 @@
 if(document.querySelector("title").textContent.split(" ")[0] == "Student")
 {
 const yer = document.querySelector("#yer").textContent.split(":")[1]
-fetch("http://localhost:3000/fetchrec?year=" + yer).then((response) => {
+fetch("/fetchrec?year=" + yer).then((response) => {
     response.json().then((data) => {
         const table = document.querySelector("table")
         table.innerHTML = ""
@@ -37,7 +37,7 @@ else if(document.querySelector("title").textContent.split(" ")[0] == "Proctee")
     const yer = document.querySelector("#yer").textContent.split(":")[1]
     const name = document.querySelector("#nam").textContent.split("-")[1]
     document.querySelector("#back").innerHTML = `<a href="/rec1?name=${name}">Go Back</a>`
-    fetch("http://localhost:3000/fetchrecproc?year=" + yer + "&name=" + name).then((response) => {
+    fetch("/fetchrecproc?year=" + yer + "&name=" + name).then((response) => {
     response.json().then((data) => {
         const table = document.querySelector("table")
         table.innerHTML = ""

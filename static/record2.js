@@ -1,4 +1,4 @@
-fetch("http://localhost:3000/prolist").then((response) => {
+fetch("/prolist").then((response) => {
     response.json().then((data) => {
         const table = document.querySelector("table")
         table.innerHTML = ""
