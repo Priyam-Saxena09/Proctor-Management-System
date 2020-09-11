@@ -18,7 +18,7 @@ if(title.split(" ")[0] == "Proctor")
     <input type="number" id="phone" name="phone" placeholder="Enter Your Phone Number">
       <button>Save</button>
       </form>`
-      fetch("http://localhost:3000/prof").then((response) => {
+      fetch("/prof").then((response) => {
          response.json().then((data) => {
             document.querySelector("#name").value = data.name
             document.querySelector("#id").value = data.id
