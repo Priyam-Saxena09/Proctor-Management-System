@@ -139,7 +139,7 @@ app.post("/reco",async(req,res) => {
     const rec = await new record(req.body)
     rec.save().then(() => {
         res.render("subrecord",{
-        "name":login,
+        "name1":login,
         "stat":"Student",
         "usn":stud[0].usn,
         "year":req.body.year
@@ -169,8 +169,7 @@ app.get("/fetchyearproc",async(req,res) => {
 app.get("/sub",async(req,res) => {
     const stud = await student.find({"name":login})
     res.render("subrecord",{
-         name:login,
-         name1:login,
+         "name1":login,
          "stat":"Student",
          "usn":stud[0].usn,
          "year":req.query.year.toString()
