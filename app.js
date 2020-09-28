@@ -14,22 +14,31 @@ app.set("view engine","hbs")
 app.set("views",(__dirname,"./public"))
 
 app.get("",(req,res) => {
-    res.render("login",{})
+    res.render("login",{
+        "mess":undefined,
+        "status":"none"
+    })
 })
 
 app.get("/signup",(req,res) => {
-    res.render("signup",{})
+    res.render("signup",{
+        "error":undefined,
+        "status":"none"
+    })
 })
 
 app.post("/student",async(req,res) => {
     const stud = await new student(req.body)
     stud.save().then(() => {
         sen(req.body.name,req.body.email)
-        res.render("login",{})
+        res.render("login",{
+            "mess":"You have successfully registered in BMS Proctor Management Portal.",
+            "status":"success"
+        })
     }).catch(() => {
-        res.render("404",{
+        res.render("signup",{
             "error":"User Already Exist or You have Not fill all the details",
-            "back":"/signup"
+            "status":"danger"
         })
     })
 })
@@ -38,11 +47,14 @@ app.post("/proctor",async(req,res) => {
     const proc = await new proctor(req.body)
     proc.save().then(() => {
         sen(req.body.name,req.body.email)
-        res.render("login",{})
+        res.render("login",{
+            "mess":"You have successfully registered in BMS Proctor Management Portal.",
+            "status":"success"
+        })
     }).catch(() => {
-        res.render("404",{
+        res.render("signup",{
             "error":"User Already Exist or You have Not fill all the details",
-            "back":"/signup"
+            "status":"danger"
         })
     })
 })
@@ -74,9 +86,9 @@ app.get("/getd",async(req,res) => {
     }
     else
     {
-        res.render("404",{
-            "error":"User Not Found",
-            "back":"/"
+        res.render("login",{
+            "mess":"User not Found",
+            "status":"danger"
         })
     }
 })
@@ -145,9 +157,11 @@ app.post("/reco",async(req,res) => {
         "year":req.body.year
         })
     }).catch(() => {
-        res.render("404",{
-            "error":"Please fill all the details",
-            "back":`/recform?year=${req.body.year}`
+        res.render("recform",{
+            "error":"Please fill all the Details.",
+            "status":"danger",
+            "usn":stud[0].usn,
+            "year":req.body.year
         })
     })
 })
@@ -169,7 +183,7 @@ app.get("/fetchyearproc",async(req,res) => {
 app.get("/sub",async(req,res) => {
     const stud = await student.find({"name":login})
     res.render("subrecord",{
-         "name1":login,
+         "name":login,
          "stat":"Student",
          "usn":stud[0].usn,
          "year":req.query.year.toString()
@@ -352,4 +366,3 @@ app.get("/logout",(req,res) => {
 app.listen(port,() => {
     console.log("Server is running on Port " + port)
 })
-
